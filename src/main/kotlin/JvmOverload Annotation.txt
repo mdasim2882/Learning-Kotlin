@@ -1,0 +1,31 @@
+Overloads generation
+====================
+
+Normally, if you write a Kotlin function with default parameter values,
+it will be visible in Java only as a full signature, with all parameters present.
+If you wish to expose multiple overloads to Java callers, you can use the @JvmOverloads annotation.
+
+The annotation also works for constructors, static methods, and so on.
+It can't be used on abstract methods, including methods defined in interfaces.
+
+
+class Circle @JvmOverloads constructor(centerX: Int, centerY: Int, radius: Double = 1.0) {
+    @JvmOverloads fun draw(label: String, lineWidth: Int = 1, color: String = "red") { /*...*/ }
+}
+
+For every parameter with a default value, this will generate one additional overload,
+which has this parameter and all parameters to the right of it in the parameter list removed.
+In this example, the following will be generated:
+
+// Constructors:
+Circle(int centerX, int centerY, double radius)
+Circle(int centerX, int centerY)
+
+// Methods
+void draw(String label, int lineWidth, String color) { }
+void draw(String label, int lineWidth) { }
+void draw(String label) { }
+
+Note that, as described in Secondary constructors, if a class has default values for all constructor parameters,
+a public constructor with no arguments will be generated for it.
+This works even if the @JvmOverloads annotation is not specified.

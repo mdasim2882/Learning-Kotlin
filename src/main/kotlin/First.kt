@@ -4,6 +4,7 @@ fun main() {
 
 
     // storing function as a variable c,d can be any variable name
+    // Higher order function
     var fn: (c: Int, d: Int) -> Int = ::add
     println(fn(34, 6))
 
