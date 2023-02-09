@@ -8,6 +8,10 @@ fun main() {
 
     // Using higher order function as a parameter
     calculator(5.0, 7.0, ::sum)
+
+
+    val sub = { x:Int, y:Int -> x - y }
+    println(sub(7,4))
 }
 
 fun sum(a: Double, b: Double): Double = a + b
