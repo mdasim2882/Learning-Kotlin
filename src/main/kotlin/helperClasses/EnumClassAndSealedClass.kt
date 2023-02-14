@@ -5,12 +5,14 @@ fun main() {
 
     val d = Day.MONDAY
 
+    println("d = $d")
     val l = Day.values()
     for (e in l) {
         print("$e -> ")
-        e.formattedDay()
+         e.formattedDay()
     }
     /*  OUTPUT OF ABOVE CODE
+     d = MONDAY
      MONDAY -> It is 1 day of the week
      TUESDAY -> It is 2 day of the week
      WEDNESDAY -> It is 3 day of the week
@@ -29,11 +31,11 @@ fun main() {
         is Red -> tile.points * 5
     }
 
-    println(points)
+    println(points) // 150
 
 }
 
-enum class Day(val number: Number) {
+enum class Day(var number: Number) {
     // Used for declaring constant values
     MONDAY(1),
     TUESDAY(2),
