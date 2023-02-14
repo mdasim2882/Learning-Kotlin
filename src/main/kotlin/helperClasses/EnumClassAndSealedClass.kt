@@ -49,7 +49,7 @@ enum class Day(val number: Number) {
 }
 
 
-// Sealed class is used to reference same class with objects of different type
+// Sealed class is used here to reference same class with objects of different type
 sealed class Tile
 class Red(val type: String, val points: Int) : Tile()
 class Blue(val points: Int) : Tile()

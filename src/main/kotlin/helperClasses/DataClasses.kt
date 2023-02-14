@@ -1,7 +1,10 @@
 package helperClasses
 
+
 fun main() {
-    val p1 = Person( 1, "John",  "London");
+
+
+    val p1 = Person(1, "John", "London");
     val p2 = Person(2, "John", "London");
     val p3 = p2.copy(3);
 

@@ -12,9 +12,9 @@ fun <T> List<T>.filterring(predicate: (T) -> Boolean): List<T> {
 
 
 fun main() {
-//    val l = listOf(1, 2, 3, 4, 5, 6)
-//    val res = l.filterring { it -> it % 2 == 0 }
-//    println(res)
+    val l = listOf(1, 2, 3, 4, 5, 6)
+    val res = l.filterring { it -> it % 2 == 0 }
+    println(res)
 
     repeat(5){
         println("hello $it")

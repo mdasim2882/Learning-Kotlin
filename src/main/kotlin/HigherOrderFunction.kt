@@ -12,6 +12,11 @@ fun main() {
 
     val sub = { x:Int, y:Int -> x - y }
     println(sub(7,4))
+
+    val list = listOf(1 to "A", 2 to "B",3 to "C")
+    val res = list.toMap()
+    println(list)
+    println(res)
 }
 
 fun sum(a: Double, b: Double): Double = a + b
