@@ -1,29 +1,29 @@
 fun main() {
 
     // Parameters in Class Primary constructor and functions are final by default
-    val automobile: Automobile = Automobile("Mustang", 4, 5,true);
+    val automobile: Automobile = Automobile("Mustang", 4, 5, true);
     println(automobile)
     automobile.drive()
 
     println(sub(13, 7))
 
-    var car:Car= Car("Ferrari",  "Petrol")
-    var car2:Car=Car("Lamborghini", 4,2,"Diesel")
+    var car: Car = Car("Ferrari", "Petrol")
+    var car2: Car = Car("Lamborghini", 4, 2, "Diesel")
 
-    println(car)
+    println("car = $car") // car = Ferrari , 4, 5, Diesel
 
-    println(car2)
+    println("Car2 = $car2") // Car2 = Lamborghini , 4, 2, Diesel
 
     car2 = car
-    println(car2)
+    println("Car2 = $car2") // Car2 = Ferrari , 4, 5, Diesel
 
 }
 
 fun sub(a: Int, b: Int): Int = a - b
 
 
-class Automobile(val name: String, val tyres: Int, val maxSeating: Int, hasAirBags:Boolean) {
-    var airbags:Boolean= hasAirBags
+class Automobile(val name: String, val tyres: Int, val maxSeating: Int, hasAirBags: Boolean) {
+    var airbags: Boolean = hasAirBags
 
     fun drive() {
         println("airbags = $airbags")
